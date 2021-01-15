@@ -74,8 +74,24 @@ function generatePassword() {
         newSet = numeric.concat(alpha, uppercaseLetters);
     }
     // If 2 positive choices - create a new set
-
-    
+    else if (confirmSpecial && confirmNumeric) {
+        newSet = special.concat(numeric);
+    }
+    else if (confirmSpecial && confirmLowercase) {
+        newSet = special.concat(lowercaseLetters);
+    }
+    else if (confirmSpecial && confirmUppercase) {
+        newSet = special.concat(uppercaseLetters);
+    }
+    else if (confirmNumeric && confirmLowercase) {
+        newSet = numeric.concat(lowercaseLetters);
+    }
+    else if (confirmNumeric && confirmUppercase) {
+        newSet = numeric.concat(numeric, uppercaseLetters);
+    }
+    else if (confirmLowercase && confirmUppercase) {
+        newSet = lowercaseLetters.concat(uppercaseLetters);
+    }
     // If 1 positive choices - create a new set
 
     
