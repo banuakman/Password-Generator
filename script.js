@@ -22,8 +22,9 @@ uppercaseLetters = lowercaseLetters.map(toUpper);
 var newSet;
 
 //Functions=======================================
-// When button clicked 
-
+// When button clicked run function
+var button = document.querySelector("#generate");
+button.addEventListener("click", generatePassword);
 
 // Start a function to generate password
 function generatePassword() {
@@ -84,4 +85,3 @@ function generatePassword() {
 
 }
 
-generatePassword()
