@@ -49,5 +49,14 @@ characterLength = parseInt(prompt("How many characters would you like your passw
         choices = alert("You must choose at least one character type to generate the password");
 
     }
-    
-//Function to create password when user input is validated
+    // If 4 positive choices - create a new set
+
+    // If 3 positive choices - create a new set
+
+    // If 2 positive choices - create a new set
+
+    // If 1 positive choices - create a new set
+
+//Function to create password
+    // random selection from valiables
+    // write password value to text box
