@@ -105,13 +105,20 @@ function generatePassword() {
     else if (confirmUppercase) {
         newSet = uppercaseLetters;
     }
-    console.log(newSet)
     //Function to create password
+        // Create for loop to choose password characters
         // random selection from newSet
 
+        var pass = [];
+        for (var i = 0; i < characterLength; i++) {
+            var choices = newSet[Math.floor(Math.random() * newSet.length)];
+            pass.push(choices);
+        }
+        // Joins the password array and converts it to a string
+        var password = pass.join("");
+        alert(password)
+    }
         // Write password to the #password input
-        var password = newSet;
-        var passwordText = document.querySelector("#password");
-            passwordText.value = password;
+var passwordText = document.querySelector("#password");
+passwordText.value = password;
         
-}
