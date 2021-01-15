@@ -19,8 +19,6 @@ var toUpper = function (letters) {
     };
 uppercaseLetters = lowercaseLetters.map(toUpper);
 
-console.log (uppercaseLetters)
-
 //Functions=======================================
 // When button clicked 
 // Start a function to generate password
@@ -28,7 +26,12 @@ console.log (uppercaseLetters)
 // Ask (prompt) the length 
 characterLength = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
     // Check a length of at least 8 characters and no more than 128 characters
+    if (!characterLength) {
+        alert("You need to enter a value to start generating a password");
+    } else if (characterLength < 8 || characterLength > 128) {
+        characterLength = parseInt(prompt("Please choose a number between 8 and 128"));
 
+    }         
 // Confirm the following 
     // Special characters
     // Numeric characters
