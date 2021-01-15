@@ -2,7 +2,7 @@
 // User Inputs
 var characterLength
 var confirmSpecial
-var confirmNumber
+var confirmNumeric
 var confirmUppercase
 var confirmLowercase
 
@@ -31,13 +31,18 @@ characterLength = parseInt(prompt("How many characters would you like your passw
     } else if (characterLength < 8 || characterLength > 128) {
         characterLength = parseInt(prompt("Please choose a number between 8 and 128"));
 
-    }         
-// Confirm the following 
-    // Special characters
-    // Numeric characters
-    // Lowercase characters
-    // Uppercase characters
 
+// Confirm the following 
+   } else {
+    // Special characters
+    confirmSpecial = confirm("Would you like your password to contain special characters?");
+    // Numeric characters
+    confirmNumeric = confirm("Would you like your password to contain numbers?");
+    // Lowercase characters
+    confirmLowercase = confirm("Would you like your password to contain lowercase characters?");    
+    // Uppercase characters
+    confirmUppercase = confirm("Would you like your password to contain uppercase characters?");
+};
 // Validate user input and ensure that at least one character type is selected
     // If 4 negative choices selected Alert to choose one
 
