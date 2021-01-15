@@ -10,7 +10,7 @@ var confirmLowercase
     // Special characters
 special = ["!", "#", "$", "%", "&", "/", "(", ")", "=", "*", "?", "@", "+", ">", "<"];
     // Numeric characters
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+numeric= [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     // Lowercase characters
 lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     // Uppercase characters
@@ -46,13 +46,27 @@ characterLength = parseInt(prompt("How many characters would you like your passw
 // Validate user input and ensure that at least one character type is selected
     // If 4 negative choices, Alert to choose one
     if (!confirmSpecial && !confirmNumeric && !confirmLowercase && !confirmUppercase) {
-        choices = alert("You must choose at least one character type to generate the password");
+        newSet = alert("You must choose at least one character type to generate the password");
 
     }
     // If 4 positive choices - create a new set
-
+    else if (confirmSpecial && confirmNumeric && confirmLowercase && confirmUppercase) {
+        newSet = special.concat(numeric, lowercaseLetters, uppercaseLetters);
+    }
     // If 3 positive choices - create a new set
-
+    else if (confirmSpecial && confirmNumeric && confirmUppercase) {
+        newSet = special.concat(number, uppercaseLetters);
+    }
+    else if (confirmSpecial && confirmNumeric && confirmLowercase) {
+        newSet = special.concat(number, lowercaseLetters);
+    }
+    else if (confirmSpecial && confirmNumeric && confirmUppercase) {
+        newSet = special.concat(alpha, uppercaseLetters);
+    }
+    else if (confirmNumeric && confirmLowercase && confirmUppercase) {
+        newSet = numeric.concat(alpha, uppercaseLetters);
+    }
+    console.log (newSet)
     // If 2 positive choices - create a new set
 
     // If 1 positive choices - create a new set
