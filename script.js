@@ -44,6 +44,10 @@ characterLength = parseInt(prompt("How many characters would you like your passw
     confirmUppercase = confirm("Would you like your password to contain uppercase characters?");
 };
 // Validate user input and ensure that at least one character type is selected
-    // If 4 negative choices selected Alert to choose one
+    // If 4 negative choices, Alert to choose one
+    if (!confirmSpecial && !confirmNumeric && !confirmLowercase && !confirmUppercase) {
+        choices = alert("You must choose at least one character type to generate the password");
 
+    }
+    
 //Function to create password when user input is validated
