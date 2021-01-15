@@ -73,7 +73,7 @@ function generatePassword() {
     else if (confirmNumeric && confirmLowercase && confirmUppercase) {
         newSet = numeric.concat(alpha, uppercaseLetters);
     }
-    // If 2 positive choices - create a new set
+        // If 2 positive choices - create a new set
     else if (confirmSpecial && confirmNumeric) {
         newSet = special.concat(numeric);
     }
@@ -92,7 +92,7 @@ function generatePassword() {
     else if (confirmLowercase && confirmUppercase) {
         newSet = lowercaseLetters.concat(uppercaseLetters);
     }
-    // If 1 positive choices - create a new set
+        // If 1 positive choices - create a new set
     else if (confirmSpecial) {
         newSet = special;
     }
@@ -107,8 +107,11 @@ function generatePassword() {
     }
     console.log(newSet)
     //Function to create password
+        // random selection from newSet
 
-    // random selection from newSet
-
+        // Write password to the #password input
+        var password = newSet;
+        var passwordText = document.querySelector("#password");
+            passwordText.value = password;
+        
 }
-
