@@ -93,8 +93,19 @@ function generatePassword() {
         newSet = lowercaseLetters.concat(uppercaseLetters);
     }
     // If 1 positive choices - create a new set
-
-    
+    else if (confirmSpecial) {
+        newSet = special;
+    }
+    else if (confirmNumeric) {
+        newSet = numeric;
+    }
+    else if (confirmLowercase) {
+        newSet = lowercaseLetters;
+    }
+    else if (confirmUppercase) {
+        newSet = uppercaseLetters;
+    }
+    console.log(newSet)
     //Function to create password
 
     // random selection from newSet
