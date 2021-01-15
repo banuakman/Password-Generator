@@ -26,6 +26,7 @@ console.log (uppercaseLetters)
 // Start a function to generate password
 
 // Ask (prompt) the length 
+characterLength = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
     // Check a length of at least 8 characters and no more than 128 characters
 
 // Confirm the following 
